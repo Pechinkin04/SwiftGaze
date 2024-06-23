@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct Swift_GazeApp: App {
+    
+//    var shedule = SheduleObservable()
+    @State var shedule = MockData.shedule
+    @State var categories = MockData.categories
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView(shedule: shedule, categories: categories)
         }
     }
 }

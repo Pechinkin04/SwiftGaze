@@ -7,18 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4224982C2403F30012EBAE /* AddCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224972C2403F30012EBAE /* AddCategoriesView.swift */; };
+		3B4224AF2C2498F40012EBAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224AE2C2498F40012EBAE /* SettingsView.swift */; };
+		3B4224B12C249CEA0012EBAE /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224B02C249CEA0012EBAE /* NotificationManager.swift */; };
+		3B4224B32C249CFE0012EBAE /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224B22C249CFE0012EBAE /* OnBoardView.swift */; };
+		3B4224B52C2559830012EBAE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224B42C2559830012EBAE /* MainTabView.swift */; };
+		3B4224B72C255A780012EBAE /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224B62C255A780012EBAE /* TasksView.swift */; };
+		3B4224BF2C26F45F0012EBAE /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224BE2C26F45F0012EBAE /* EditTaskView.swift */; };
 		3B4A78302C22C997009F4EC0 /* Swift_GazeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A782F2C22C997009F4EC0 /* Swift_GazeApp.swift */; };
 		3B4A78322C22C997009F4EC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A78312C22C997009F4EC0 /* ContentView.swift */; };
 		3B4A78342C22C99B009F4EC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A78332C22C99B009F4EC0 /* Assets.xcassets */; };
 		3B4A78372C22C99B009F4EC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A78362C22C99B009F4EC0 /* Preview Assets.xcassets */; };
+		3B4A783E2C22CC2B009F4EC0 /* SheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A783D2C22CC2B009F4EC0 /* SheduleView.swift */; };
+		3B4A78402C22CD75009F4EC0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A783F2C22CD75009F4EC0 /* Record.swift */; };
+		3B4A78422C22EE96009F4EC0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A78412C22EE96009F4EC0 /* Extensions.swift */; };
+		3B4A78442C22F60D009F4EC0 /* SheduleObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A78432C22F60D009F4EC0 /* SheduleObservable.swift */; };
+		3B4A78462C236A9A009F4EC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A78452C236A9A009F4EC0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B4224972C2403F30012EBAE /* AddCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoriesView.swift; sourceTree = "<group>"; };
+		3B4224AE2C2498F40012EBAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3B4224B02C249CEA0012EBAE /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		3B4224B22C249CFE0012EBAE /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
+		3B4224B42C2559830012EBAE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		3B4224B62C255A780012EBAE /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		3B4224BE2C26F45F0012EBAE /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 		3B4A782C2C22C997009F4EC0 /* Swift Gaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Gaze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4A782F2C22C997009F4EC0 /* Swift_GazeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_GazeApp.swift; sourceTree = "<group>"; };
 		3B4A78312C22C997009F4EC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3B4A78332C22C99B009F4EC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B4A78362C22C99B009F4EC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B4A783D2C22CC2B009F4EC0 /* SheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleView.swift; sourceTree = "<group>"; };
+		3B4A783F2C22CD75009F4EC0 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		3B4A78412C22EE96009F4EC0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3B4A78432C22F60D009F4EC0 /* SheduleObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleObservable.swift; sourceTree = "<group>"; };
+		3B4A78452C236A9A009F4EC0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +56,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4224B82C26D7760012EBAE /* Shedule */ = {
+			isa = PBXGroup;
+			children = (
+				3B4A783D2C22CC2B009F4EC0 /* SheduleView.swift */,
+				3B4224972C2403F30012EBAE /* AddCategoriesView.swift */,
+			);
+			path = Shedule;
+			sourceTree = "<group>";
+		};
+		3B4224B92C26D7860012EBAE /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				3B4224B62C255A780012EBAE /* TasksView.swift */,
+				3B4224BE2C26F45F0012EBAE /* EditTaskView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		3B4224BA2C26D7920012EBAE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3B4224AE2C2498F40012EBAE /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3B4224BB2C26D7C40012EBAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B4A78432C22F60D009F4EC0 /* SheduleObservable.swift */,
+				3B4A783F2C22CD75009F4EC0 /* Record.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B4224BD2C26D7E90012EBAE /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				3B4A78312C22C997009F4EC0 /* ContentView.swift */,
+				3B4224B42C2559830012EBAE /* MainTabView.swift */,
+				3B4224B82C26D7760012EBAE /* Shedule */,
+				3B4224B92C26D7860012EBAE /* Tasks */,
+				3B4224BA2C26D7920012EBAE /* Settings */,
+				3B4224BB2C26D7C40012EBAE /* Model */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
 		3B4A78232C22C997009F4EC0 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				3B4A782F2C22C997009F4EC0 /* Swift_GazeApp.swift */,
-				3B4A78312C22C997009F4EC0 /* ContentView.swift */,
+				3B4224B22C249CFE0012EBAE /* OnBoardView.swift */,
+				3B4A78412C22EE96009F4EC0 /* Extensions.swift */,
+				3B4224B02C249CEA0012EBAE /* NotificationManager.swift */,
+				3B4224BD2C26D7E90012EBAE /* Review */,
 				3B4A78332C22C99B009F4EC0 /* Assets.xcassets */,
+				3B4A78452C236A9A009F4EC0 /* LaunchScreen.storyboard */,
 				3B4A78352C22C99B009F4EC0 /* Preview Content */,
 			);
 			path = "Swift Gaze";
@@ -125,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4A78462C236A9A009F4EC0 /* LaunchScreen.storyboard in Resources */,
 				3B4A78372C22C99B009F4EC0 /* Preview Assets.xcassets in Resources */,
 				3B4A78342C22C99B009F4EC0 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +214,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4A78422C22EE96009F4EC0 /* Extensions.swift in Sources */,
+				3B4224BF2C26F45F0012EBAE /* EditTaskView.swift in Sources */,
+				3B4224AF2C2498F40012EBAE /* SettingsView.swift in Sources */,
+				3B4224982C2403F30012EBAE /* AddCategoriesView.swift in Sources */,
+				3B4224B12C249CEA0012EBAE /* NotificationManager.swift in Sources */,
+				3B4A78442C22F60D009F4EC0 /* SheduleObservable.swift in Sources */,
+				3B4224B52C2559830012EBAE /* MainTabView.swift in Sources */,
+				3B4A783E2C22CC2B009F4EC0 /* SheduleView.swift in Sources */,
+				3B4224B72C255A780012EBAE /* TasksView.swift in Sources */,
+				3B4224B32C249CFE0012EBAE /* OnBoardView.swift in Sources */,
 				3B4A78322C22C997009F4EC0 /* ContentView.swift in Sources */,
+				3B4A78402C22CD75009F4EC0 /* Record.swift in Sources */,
 				3B4A78302C22C997009F4EC0 /* Swift_GazeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -277,6 +365,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,6 +394,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
