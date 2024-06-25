@@ -9,7 +9,7 @@ struct MainTabView: View {
     @State var categories: [CategoryRecord]
     
     var body: some View {
-        if !isOnboardingCompleted {
+        if isOnboardingCompleted {
             TabView(selection: $tabSelected) {
                 SheduleView(shedule: $shedule,
                             categories: $categories)

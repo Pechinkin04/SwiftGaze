@@ -32,105 +32,27 @@ struct AddCategoriesView: View {
                 
                 VStack {
                     
-                    List($categories) { $category in
-                        VStack {
-                            HStack {
-                                
-                                Button {
-                                    withAnimation(.smooth) {
-                                        if showPickImageBool == false {
-                                            showPickImageBool = true
-                                            showPickImageIndex = category.id
-                                        } else if showPickImageIndex != category.id {
-                                            showPickImageIndex = category.id
-                                        } else {
-                                            showPickImageBool = false
-                                        }
-                                    }
-                                } label: {
-                                    ZStack {
-                                        Color.buttonNormal
-                                        
-                                        Image(systemName: category.img.rawValue)
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 24, height: 24)
-                                            .foregroundColor(.textWhite)
-                                    }
-                                    .frame(width: 48, height: 48)
-                                    .cornerRadius(8)
-                                }
-//                                    .onTapGesture {
-//                                        if showPickImageBool == false {
-//                                            showPickImageBool = true
-//                                            showPickImageIndex = category.id
-//                                        } else if showPickImageIndex != category.id {
-//                                            showPickImageIndex = category.id
-//                                        } else {
-//                                            showPickImageBool = false
-//                                        }
-////                                        showPickImageBool.toggle()
-////                                        showPickImageIndex = category.id
-//                                    }
-                                
-                                
-                                Spacer().frame(width: 20)
-                                
-                                TextField("Text", text: $category.text)
-                                    .font(.body)
-                                    .foregroundColor(.textBlack)
-                                    .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
-                                        isKeyboardActive = true
-                                    }
-                                    .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
-                                        isKeyboardActive = false
-                                    }
-                                
-                                
-                                
-                                Spacer()
-//                                
-//                                Button {
-//                                    //                                showDeleteAlert.toggle()
-//                                    withAnimation {
-//                                        deleteCategory(category)
-//                                    }
-//                                } label: {
-                                    Image(systemName: "trash")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 24, height: 24)
-                                        .foregroundColor(.buttonNormal)
-//                                }
-                                        .onTapGesture {
-                                            showDeleteAlert.toggle()
-                                            deleteAlertIndex = category.id
-//                                            deleteCategory(category)
-                                        }
-                                .alert(isPresented: $showDeleteAlert, content: {
-                                    Alert(title: Text("Are you sure?"),
-                                          message: Text("Records in this category\nwill also be deleted"),
-                                          primaryButton: .destructive(Text("Delete"),
-                                                                      action: {
-                                        withAnimation {
-                                            deleteCategory(deleteAlertIndex)
-                                        }
-                                    }),
-                                          secondaryButton: .cancel(Text("Cancel")))
-                                })
-                            }
-                            
-                            if showPickImageBool, showPickImageIndex == category.id {
+                    if !categories.isEmpty {
+                        List($categories) { $category in
+                            VStack {
                                 HStack {
-                                    ForEach(ImageCategory.allCases, id: \.self) { categoryIMG in
-                                        ZStack {
-                                            if category.img.rawValue == categoryIMG.rawValue {
-                                                Color.buttonNormal
+                                    
+                                    Button {
+                                        withAnimation(.smooth) {
+                                            if showPickImageBool == false {
+                                                showPickImageBool = true
+                                                showPickImageIndex = category.id
+                                            } else if showPickImageIndex != category.id {
+                                                showPickImageIndex = category.id
                                             } else {
-                                                Color.buttonDisabled
+                                                showPickImageBool = false
                                             }
+                                        }
+                                    } label: {
+                                        ZStack {
+                                            Color.buttonNormal
                                             
-                                            Image(systemName: categoryIMG.rawValue)
+                                            Image(systemName: category.img.rawValue)
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(width: 24, height: 24)
@@ -138,24 +60,87 @@ struct AddCategoriesView: View {
                                         }
                                         .frame(width: 48, height: 48)
                                         .cornerRadius(8)
-                                        .onTapGesture {
-                                            category.img = categoryIMG
+                                    }
+                                    
+                                    
+                                    Spacer().frame(width: 20)
+                                    
+                                    TextField("Text", text: $category.text)
+                                        .font(.body)
+                                        .foregroundColor(.textBlack)
+                                        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
+                                            isKeyboardActive = true
                                         }
-                                        
-                                        if categoryIMG != ImageCategory.allCases.last {
-                                            Spacer()
+                                        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
+                                            isKeyboardActive = false
+                                        }
+                                    
+                                    
+                                    
+                                    Spacer()
+                                    Image(systemName: "trash")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 24, height: 24)
+                                        .foregroundColor(.buttonNormal)
+                                        .onTapGesture {
+                                            showDeleteAlert.toggle()
+                                            deleteAlertIndex = category.id
+                                        }
+                                        .alert(isPresented: $showDeleteAlert, content: {
+                                            Alert(title: Text("Are you sure?"),
+                                                  message: Text("Records in this category\nwill also be deleted"),
+                                                  primaryButton: .destructive(Text("Delete"),
+                                                                              action: {
+                                                withAnimation {
+                                                    deleteCategory(deleteAlertIndex)
+                                                }
+                                            }),
+                                                  secondaryButton: .cancel(Text("Cancel")))
+                                        })
+                                }
+                                
+                                if showPickImageBool, showPickImageIndex == category.id {
+                                    HStack {
+                                        ForEach(ImageCategory.allCases, id: \.self) { categoryIMG in
+                                            ZStack {
+                                                if category.img.rawValue == categoryIMG.rawValue {
+                                                    Color.buttonNormal
+                                                } else {
+                                                    Color.buttonDisabled
+                                                }
+                                                
+                                                Image(systemName: categoryIMG.rawValue)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width: 24, height: 24)
+                                                    .foregroundColor(.textWhite)
+                                            }
+                                            .frame(width: 48, height: 48)
+                                            .cornerRadius(8)
+                                            .onTapGesture {
+                                                category.img = categoryIMG
+                                            }
+                                            
+                                            if categoryIMG != ImageCategory.allCases.last {
+                                                Spacer()
+                                            }
                                         }
                                     }
+                                    .frame(width: .infinity)
                                 }
-                                .frame(width: .infinity)
                             }
                         }
+                        .listStyle(.plain)
+                    } else {
+                        Spacer()
                     }
-                    .listStyle(.plain)
                  
                     Button {
                         withAnimation {
                             categories.append(CategoryRecord(img: .fire, text: ""))
+//                            categories.insert(CategoryRecord(img: .fire, text: ""), at: 0)
+                            UserDefaults.standard.setCategoryRecords(categories, forKey: "categorySwift")
                         }
                     } label: {
                         ZStack {
@@ -166,11 +151,10 @@ struct AddCategoriesView: View {
                                 .font(.body)
                                 .foregroundColor(.buttonNormal)
                         }
-                        .frame(width: .infinity, height: 56)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 56)
                         .padding()
                     }
-                    
-                    Spacer()
                 }
                 
             }
@@ -179,7 +163,7 @@ struct AddCategoriesView: View {
             .navigationTitle("Categories")
             .navigationBarItems(trailing:
                 Button {
-                    showAddCategoriesView = false
+                showAddCategoriesView.toggle()
                 } label: {
                     Text("Save")
                         .font(.body)
@@ -204,6 +188,8 @@ struct AddCategoriesView: View {
                     }
                     j -= 1
                 }
+                UserDefaults.standard.setShedule(shedule, forKey: "sheduleSwift")
+                UserDefaults.standard.setCategoryRecords(categories, forKey: "categorySwift")
                 return
             }
             

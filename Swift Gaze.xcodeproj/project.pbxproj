@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B07B1342C29AD24006A4CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07B1332C29AD24006A4CE4 /* AppDelegate.swift */; };
+		3B07B1362C29AD4E006A4CE4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07B1352C29AD4E006A4CE4 /* NetworkManager.swift */; };
+		3B07B1382C29AD68006A4CE4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07B1372C29AD68006A4CE4 /* UserData.swift */; };
+		3B07B13A2C29CC9F006A4CE4 /* ContentViewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07B1392C29CC9F006A4CE4 /* ContentViewUser.swift */; };
+		3B07B13C2C29CCB6006A4CE4 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07B13B2C29CCB6006A4CE4 /* LoaderView.swift */; };
 		3B4224982C2403F30012EBAE /* AddCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224972C2403F30012EBAE /* AddCategoriesView.swift */; };
 		3B4224AF2C2498F40012EBAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224AE2C2498F40012EBAE /* SettingsView.swift */; };
 		3B4224B12C249CEA0012EBAE /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4224B02C249CEA0012EBAE /* NotificationManager.swift */; };
@@ -23,9 +28,23 @@
 		3B4A78422C22EE96009F4EC0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A78412C22EE96009F4EC0 /* Extensions.swift */; };
 		3B4A78442C22F60D009F4EC0 /* SheduleObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A78432C22F60D009F4EC0 /* SheduleObservable.swift */; };
 		3B4A78462C236A9A009F4EC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A78452C236A9A009F4EC0 /* LaunchScreen.storyboard */; };
+		3B902BA42C2AD82700B464CA /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BA32C2AD82700B464CA /* ApphudSDK */; };
+		3B902BA72C2AD83D00B464CA /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BA62C2AD83D00B464CA /* OneSignalExtension */; };
+		3B902BA92C2AD83D00B464CA /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BA82C2AD83D00B464CA /* OneSignalFramework */; };
+		3B902BAB2C2AD83D00B464CA /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BAA2C2AD83D00B464CA /* OneSignalInAppMessages */; };
+		3B902BAD2C2AD83D00B464CA /* OneSignalLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BAC2C2AD83D00B464CA /* OneSignalLocation */; };
+		3B902BB02C2AD85300B464CA /* AppMetricaAdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BAF2C2AD85300B464CA /* AppMetricaAdSupport */; };
+		3B902BB22C2AD85300B464CA /* AppMetricaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BB12C2AD85300B464CA /* AppMetricaCore */; };
+		3B902BB42C2AD85300B464CA /* AppMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BB32C2AD85300B464CA /* AppMetricaCrashes */; };
+		3B902BB62C2AD85300B464CA /* AppMetricaWebKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B902BB52C2AD85300B464CA /* AppMetricaWebKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B07B1332C29AD24006A4CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B07B1352C29AD4E006A4CE4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3B07B1372C29AD68006A4CE4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3B07B1392C29CC9F006A4CE4 /* ContentViewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewUser.swift; sourceTree = "<group>"; };
+		3B07B13B2C29CCB6006A4CE4 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		3B4224972C2403F30012EBAE /* AddCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoriesView.swift; sourceTree = "<group>"; };
 		3B4224AE2C2498F40012EBAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3B4224B02C249CEA0012EBAE /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -50,6 +69,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B902BB42C2AD85300B464CA /* AppMetricaCrashes in Frameworks */,
+				3B902BA42C2AD82700B464CA /* ApphudSDK in Frameworks */,
+				3B902BB02C2AD85300B464CA /* AppMetricaAdSupport in Frameworks */,
+				3B902BAD2C2AD83D00B464CA /* OneSignalLocation in Frameworks */,
+				3B902BA92C2AD83D00B464CA /* OneSignalFramework in Frameworks */,
+				3B902BB22C2AD85300B464CA /* AppMetricaCore in Frameworks */,
+				3B902BAB2C2AD83D00B464CA /* OneSignalInAppMessages in Frameworks */,
+				3B902BB62C2AD85300B464CA /* AppMetricaWebKit in Frameworks */,
+				3B902BA72C2AD83D00B464CA /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +152,11 @@
 			isa = PBXGroup;
 			children = (
 				3B4A782F2C22C997009F4EC0 /* Swift_GazeApp.swift */,
+				3B07B1392C29CC9F006A4CE4 /* ContentViewUser.swift */,
+				3B07B13B2C29CCB6006A4CE4 /* LoaderView.swift */,
+				3B07B1352C29AD4E006A4CE4 /* NetworkManager.swift */,
+				3B07B1372C29AD68006A4CE4 /* UserData.swift */,
+				3B07B1332C29AD24006A4CE4 /* AppDelegate.swift */,
 				3B4224B22C249CFE0012EBAE /* OnBoardView.swift */,
 				3B4A78412C22EE96009F4EC0 /* Extensions.swift */,
 				3B4224B02C249CEA0012EBAE /* NotificationManager.swift */,
@@ -159,6 +192,17 @@
 			dependencies = (
 			);
 			name = "Swift Gaze";
+			packageProductDependencies = (
+				3B902BA32C2AD82700B464CA /* ApphudSDK */,
+				3B902BA62C2AD83D00B464CA /* OneSignalExtension */,
+				3B902BA82C2AD83D00B464CA /* OneSignalFramework */,
+				3B902BAA2C2AD83D00B464CA /* OneSignalInAppMessages */,
+				3B902BAC2C2AD83D00B464CA /* OneSignalLocation */,
+				3B902BAF2C2AD85300B464CA /* AppMetricaAdSupport */,
+				3B902BB12C2AD85300B464CA /* AppMetricaCore */,
+				3B902BB32C2AD85300B464CA /* AppMetricaCrashes */,
+				3B902BB52C2AD85300B464CA /* AppMetricaWebKit */,
+			);
 			productName = "Swift Gaze";
 			productReference = 3B4A782C2C22C997009F4EC0 /* Swift Gaze.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +231,11 @@
 				Base,
 			);
 			mainGroup = 3B4A78232C22C997009F4EC0;
+			packageReferences = (
+				3B902BA22C2AD82700B464CA /* XCRemoteSwiftPackageReference "ApphudSDK" */,
+				3B902BA52C2AD83D00B464CA /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				3B902BAE2C2AD85300B464CA /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */,
+			);
 			productRefGroup = 3B4A782D2C22C997009F4EC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,8 +265,11 @@
 			files = (
 				3B4A78422C22EE96009F4EC0 /* Extensions.swift in Sources */,
 				3B4224BF2C26F45F0012EBAE /* EditTaskView.swift in Sources */,
+				3B07B1382C29AD68006A4CE4 /* UserData.swift in Sources */,
+				3B07B13A2C29CC9F006A4CE4 /* ContentViewUser.swift in Sources */,
 				3B4224AF2C2498F40012EBAE /* SettingsView.swift in Sources */,
 				3B4224982C2403F30012EBAE /* AddCategoriesView.swift in Sources */,
+				3B07B1342C29AD24006A4CE4 /* AppDelegate.swift in Sources */,
 				3B4224B12C249CEA0012EBAE /* NotificationManager.swift in Sources */,
 				3B4A78442C22F60D009F4EC0 /* SheduleObservable.swift in Sources */,
 				3B4224B52C2559830012EBAE /* MainTabView.swift in Sources */,
@@ -225,8 +277,10 @@
 				3B4224B72C255A780012EBAE /* TasksView.swift in Sources */,
 				3B4224B32C249CFE0012EBAE /* OnBoardView.swift in Sources */,
 				3B4A78322C22C997009F4EC0 /* ContentView.swift in Sources */,
+				3B07B1362C29AD4E006A4CE4 /* NetworkManager.swift in Sources */,
 				3B4A78402C22CD75009F4EC0 /* Record.swift in Sources */,
 				3B4A78302C22C997009F4EC0 /* Swift_GazeApp.swift in Sources */,
+				3B07B13C2C29CCB6006A4CE4 /* LoaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +416,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Swift Gaze/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift Gaze";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Requires user’s location for better user experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -391,6 +447,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Swift Gaze/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift Gaze";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Requires user’s location for better user experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +490,81 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B902BA22C2AD82700B464CA /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apphud/ApphudSDK.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.8;
+			};
+		};
+		3B902BA52C2AD83D00B464CA /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-iOS-SDK.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+		3B902BAE2C2AD85300B464CA /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appmetrica/appmetrica-sdk-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B902BA32C2AD82700B464CA /* ApphudSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BA22C2AD82700B464CA /* XCRemoteSwiftPackageReference "ApphudSDK" */;
+			productName = ApphudSDK;
+		};
+		3B902BA62C2AD83D00B464CA /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BA52C2AD83D00B464CA /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalExtension;
+		};
+		3B902BA82C2AD83D00B464CA /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BA52C2AD83D00B464CA /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalFramework;
+		};
+		3B902BAA2C2AD83D00B464CA /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BA52C2AD83D00B464CA /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalInAppMessages;
+		};
+		3B902BAC2C2AD83D00B464CA /* OneSignalLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BA52C2AD83D00B464CA /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalLocation;
+		};
+		3B902BAF2C2AD85300B464CA /* AppMetricaAdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BAE2C2AD85300B464CA /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaAdSupport;
+		};
+		3B902BB12C2AD85300B464CA /* AppMetricaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BAE2C2AD85300B464CA /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaCore;
+		};
+		3B902BB32C2AD85300B464CA /* AppMetricaCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BAE2C2AD85300B464CA /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaCrashes;
+		};
+		3B902BB52C2AD85300B464CA /* AppMetricaWebKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B902BAE2C2AD85300B464CA /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaWebKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B4A78242C22C997009F4EC0 /* Project object */;
 }

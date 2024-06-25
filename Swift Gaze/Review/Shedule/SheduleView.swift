@@ -10,7 +10,6 @@ import SwiftUI
 struct SheduleView: View {
     
     @Binding var shedule: [Record]
-//    @EnvironmentObject var shedule: SheduleObservable
     @Binding var categories: [CategoryRecord]
     
     @State var showAddRecord = false
@@ -58,7 +57,6 @@ struct SheduleView: View {
             
             ZStack {
                 Color.bgDark.ignoresSafeArea()
-//                Color.bgDark.edgesIgnoringSafeArea(.top)
                 
                 VStack {
                     Text("Shedule")
@@ -66,7 +64,7 @@ struct SheduleView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.textWhite)
                     
-                    ScrollCategory(pickedCategory: $pickedCategory, categories: $categories, shedule: $shedule)
+                    ScrollCategory(isSheduleView: true, pickedCategory: $pickedCategory, categories: $categories, shedule: $shedule)
                     
                     Picker("Picked group:", selection: $pickedGroup) {
                         ForEach(groups, id: \.self) {
@@ -172,15 +170,13 @@ struct RecordCard: View {
             
             HStack {
                 VStack {
-                    if record.completed {
-                        Image(systemName: "checkmark.circle")
-                            .foregroundColor(.buttonSave)
-                    } else {
-                        Image(systemName: "circle")
-                    }
+                    Image(systemName: record.completed ? "checkmark.circle" : "circle")
+                        .font(.body)
+                        .foregroundColor(record.completed ? .buttonSave : .textGray)
                 }
                 .onTapGesture {
                     toogleCompleteRecord(record)
+                    UserDefaults.standard.setShedule(shedule, forKey: "sheduleSwift")
                 }
                 
                 Spacer().frame(width: 12)
@@ -243,6 +239,7 @@ struct RecordCard: View {
                 var newRecord = record
                 newRecord.completed = !record.completed
                 shedule[i] = newRecord
+                UserDefaults.standard.setShedule(shedule, forKey: "sheduleSwift")
                 return
             }
         }
@@ -253,6 +250,7 @@ struct RecordCard: View {
             print(record.id, shedule[i].id)
             if shedule[i].id == record.id {
                 shedule.remove(at: i)
+                UserDefaults.standard.setShedule(shedule, forKey: "sheduleSwift")
                 return
             }
         }
@@ -285,26 +283,8 @@ struct AddRecordView: View {
                 .foregroundColor(.textBlack)
                 .padding()
             
-            if categories.isEmpty {
-                Button {
-                    
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(.buttonNormal, lineWidth: 2)
-                        
-                        Label("Add a category", systemImage: "plus")
-                            .font(.body)
-                            .foregroundColor(.buttonNormal)
-                    }
-                    .frame(width: .infinity, height: 56)
-                }
-                .sheet(isPresented: $showAddRecord) {
-                    AddCategoriesView(categories: $categories, shedule: $shedule, showAddCategoriesView: $showAddRecord)
-                }
-            } else {
+            
                 ScrollCategory(pickedCategory: $pickedCategory, categories: $categories, shedule: $shedule)
-            }
             
             TextField("Text", text: $textNewRecord)
                 .font(.body)
@@ -351,12 +331,15 @@ struct AddRecordView: View {
                                               completed: false, 
                                               tasks: []),
                                        at: 0)
+                        UserDefaults.standard.setShedule(shedule, forKey: "sheduleSwift")
                         showAddRecord = false
+                        textNewRecord = ""
+                        datePicker = Date()
                     }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(.buttonNormal)
+                            .fill(categories.isEmpty ? .buttonDisabled : .buttonNormal)
                         
                         Text("Add")
                             .font(.body)
@@ -365,6 +348,7 @@ struct AddRecordView: View {
                     }
                     
                 }
+                .disabled(categories.isEmpty)
                 
             }
             .frame(height: 56)
@@ -377,10 +361,13 @@ struct AddRecordView: View {
         .frame(height: 366)
         .opacity(showAddRecord ? 1 : 0)
         .padding()
+        
     }
 }
 
 struct ScrollCategory: View {
+    
+    var isSheduleView = false
     
     @Binding var pickedCategory: CategoryRecord?
     @Binding var categories: [CategoryRecord]
@@ -388,46 +375,66 @@ struct ScrollCategory: View {
     @State var showAddCategoriesView = false
     
     var body: some View {
-        ScrollView(.horizontal) {
-            HStack {
-                
-                Button {
-                    showAddCategoriesView.toggle()
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(.buttonNormal, lineWidth: 2)
-                        
-                        Image(systemName: "plus")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                            .foregroundColor(.buttonNormal)
-                    }
-                    .padding(1)
-                    .frame(width: 56, height: 74)
+        if categories.isEmpty, isSheduleView == false {
+            Button {
+                showAddCategoriesView.toggle()
+            } label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(.buttonNormal, lineWidth: 2)
+                    
+                    Label("Add a category", systemImage: "plus")
+                        .font(.body)
+                        .foregroundColor(.buttonNormal)
                 }
-                .sheet(isPresented: $showAddCategoriesView, content: {
-                    AddCategoriesView(categories: $categories,
-                                      shedule: $shedule,
-                                      showAddCategoriesView: $showAddCategoriesView)
-                })
-                
-                Button {
-                    withAnimation {
-                        pickedCategory = nil
+                .frame(maxWidth: .infinity)
+                .frame(height: 56)
+            }
+            .sheet(isPresented: $showAddCategoriesView) {
+                AddCategoriesView(categories: $categories, shedule: $shedule, showAddCategoriesView: $showAddCategoriesView)
+            }
+        } else {
+            ScrollView(.horizontal) {
+                HStack {
+                    
+                    Button {
+                        showAddCategoriesView.toggle()
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(.buttonNormal, lineWidth: 2)
+                            
+                            Image(systemName: "plus")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(.buttonNormal)
+                        }
+                        .padding(1)
+                        .frame(width: 56, height: 74)
                     }
-                } label: {
-                    CategoryCard(pickedCategory: $pickedCategory, isAll: true)
-                }
-                
-                ForEach(categories) { category in
+                    .sheet(isPresented: $showAddCategoriesView, content: {
+                        AddCategoriesView(categories: $categories,
+                                          shedule: $shedule,
+                                          showAddCategoriesView: $showAddCategoriesView)
+                    })
+                    
                     Button {
                         withAnimation {
-                            pickedCategory = category
+                            pickedCategory = nil
                         }
                     } label: {
-                        CategoryCard(pickedCategory: $pickedCategory, category: category)
+                        CategoryCard(pickedCategory: $pickedCategory, isAll: true)
+                    }
+                    
+                    ForEach(categories) { category in
+                        Button {
+                            withAnimation {
+                                pickedCategory = category
+                            }
+                        } label: {
+                            CategoryCard(pickedCategory: $pickedCategory, category: category)
+                        }
                     }
                 }
             }

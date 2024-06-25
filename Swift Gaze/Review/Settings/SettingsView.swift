@@ -13,8 +13,8 @@ struct SettingsView: View {
     @Environment(\.openURL) var openURL
     
     @State private var isShareSheetShowing = false
-    @State private var shareApp = "https://apps.apple.com/app/infobook-manager/id6504610989"
-    @State private var policy = "https://www.termsfeed.com/live/cf9cab2b-890e-41d3-9196-ee580bb53685"
+    @State private var shareApp = "https://apps.apple.com/app/swift-gaze/id6504806399"
+    @State private var policy = "https://www.termsfeed.com/live/80fccef0-15bf-4e51-8805-c5c201b97d77"
     
     init() {
             //Use this if NavigationBarTitle is with Large Font
