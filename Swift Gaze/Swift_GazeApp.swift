@@ -22,7 +22,7 @@ struct Swift_GazeApp: App {
     var body: some Scene {
         WindowGroup {
             
-            if isNotUser {
+            if !isNotUser {
                 // Логика 1/0
                 if let destination = navigateTo {
                     destination

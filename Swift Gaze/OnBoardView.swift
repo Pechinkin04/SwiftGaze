@@ -33,7 +33,7 @@ struct OnBoardingView: View {
                         }
                     } else {
                         if currentPage == 0 {
-                            Text("Play and win with us")
+                            Text("Increase your earnings")
                                 .font(.title)
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
@@ -104,7 +104,7 @@ struct OnBoardingView: View {
                 .padding(24)
 //                .padding(.horizontal, 24)
 //                .padding(.top, 24)
-//                .padding(.bottom, 42)
+                .padding(.bottom, 18)
                 .background(Color.textWhite)
                 .cornerRadius(20)
             }
@@ -128,10 +128,12 @@ struct OnBoardingCards: View {
                 .offset(x: CGFloat(0 * Int(UIScreen.main.bounds.width) - currentPage * Int(UIScreen.main.bounds.width)))
             OnboardingCard(imageName: isReview ? "onBoard2" : "onBoard2User")
                 .offset(x: CGFloat(1 * Int(UIScreen.main.bounds.width) - currentPage * Int(UIScreen.main.bounds.width)))
-            OnboardingCard(imageName: isReview ? "onBoard3" : "onBoard3User")
-                .offset(x: CGFloat(2 * Int(UIScreen.main.bounds.width) - currentPage * Int(UIScreen.main.bounds.width)))
+            if !isReview {
+                OnboardingCard(imageName: "onBoard3User")
+                    .offset(x: CGFloat(2 * Int(UIScreen.main.bounds.width) - currentPage * Int(UIScreen.main.bounds.width)))
+            }
         }
-        .frame(height: 100)
+//        .frame(height: 100)
     }
 }
 
