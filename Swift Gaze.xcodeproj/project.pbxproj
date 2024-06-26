@@ -416,7 +416,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Swift Gaze/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Swift Gaze";
+				INFOPLIST_KEY_CFBundleDisplayName = "Póckềt Optión\n";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Requires user’s location for better user experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -447,7 +447,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Swift Gaze/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Swift Gaze";
+				INFOPLIST_KEY_CFBundleDisplayName = "Póckềt Optión\n";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Requires user’s location for better user experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
